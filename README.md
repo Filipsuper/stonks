@@ -1,3 +1,3 @@
-### Stonks app to draw on graph
+# Stonks app to draw on graph
 
-Using react, nodejs, tailwind and firebase
+## Using react, nodejs, tailwind and firebase
