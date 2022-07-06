@@ -1,13 +1,23 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+*{
+  @apply border-slate-900;
+}
+body{
+  @apply text-slate-600;
+  @apply bg-slate-800;
+}
+input{
+  /* @apply border-2; */
+  @apply rounded-md;
+  @apply outline-none;
+  @apply p-2;
+  @apply bg-slate-900;
+  @apply text-slate-600;
+}
+form p button {
+  @apply text-blue-500;
 }
