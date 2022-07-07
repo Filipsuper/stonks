@@ -36,9 +36,9 @@ export default function Signin(props : Props) {
     <form onSubmit={formSubmit} className='flex flex-col justify-center items-start rounded-xl shadow-xl p-10 w-5/6 md:w-1/4'>
         <h2 className='mb-4 self-center font-bold text-xl text-orange-400'>Sign In</h2>
         <label htmlFor="email" >Email</label>
-        <input type="text" className="w-full" ref={emailRef}/>
+        <input type="email" name='email' className="w-full"  ref={emailRef}/>
         <label htmlFor="pass" >Password</label>
-        <input type="text" className="w-full" ref={passRef} />
+        <input type="password" name='password' className="w-full" ref={passRef} />
         <button type='submit' className='self-center w-full bg-orange-400 rounded-md py-2 m-2 text-slate-800'>Submit</button>
         <p className='self-center'>No account?  <button onClick={() => {setAlreadyUser(false)}}>Sign Up</button></p>
         {/* <h1 className='text-red-600'>{error}</h1> */}
