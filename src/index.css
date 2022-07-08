@@ -21,3 +21,8 @@ input{
 form p button {
   @apply text-blue-500;
 }
+.center{
+  @apply flex;
+  @apply justify-center;
+  @apply items-center;
+}
