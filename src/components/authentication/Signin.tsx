@@ -40,7 +40,7 @@ export default function Signin(props : Props) {
         <label htmlFor="pass" >Password</label>
         <input type="password" name='password' className="w-full" ref={passRef} />
         <button type='submit' className='self-center w-full bg-orange-400 rounded-md py-2 m-2 text-slate-800'>Submit</button>
-        <p className='self-center'>No account?  <button onClick={() => {setAlreadyUser(false)}}>Sign Up</button></p>
+        <p className='self-center'>No account?  <button onClick={(e) => { e.preventDefault(); setAlreadyUser(false)}}>Sign Up</button></p>
         {/* <h1 className='text-red-600'>{error}</h1> */}
     </form>
   )

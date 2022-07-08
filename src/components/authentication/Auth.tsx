@@ -9,11 +9,11 @@ type Props = {
 
 export default function Auth(props : Props) {
     const { setUser } = props;
-    const [alreadyUser, setAlreadyUser] = useState(false);
+    const [ alreadyUser, setAlreadyUser ] = useState(true);
 
   return (
     <>
-        {alreadyUser ?  <Signin setUser={setUser} setAlreadyUser={setAlreadyUser} /> : <SignUp setUser={setUser} setAlreadyUser={setAlreadyUser}/>}
+        {alreadyUser ? <Signin setUser={setUser} setAlreadyUser={setAlreadyUser} /> : <SignUp setUser={setUser} setAlreadyUser={setAlreadyUser} /> }
     </>
   )
 }

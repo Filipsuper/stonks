@@ -1,0 +1,3 @@
+🔧 - Issue commits
+🔥 - Bug fix
+🆕 - new feature
