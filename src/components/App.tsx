@@ -7,12 +7,13 @@ import SignUp from './authentication/SignUp';
 import HomeScreen from './loggedIn/HomeScreen';
 
 function App() {
-  const [user, setUser] = useState<User>();
+
+  const [ user, setUser ] = useState<User>();
 
   return (
     <>
       <section className='flex justify-center items-center min-h-screen'>
-        {auth.currentUser ? <HomeScreen user={ user }/> : <Auth setUser={setUser}/>} 
+        {auth.currentUser ? <HomeScreen user={ user! }/> : <Auth setUser={setUser}/>} 
       </section>
       <footer></footer>
     </>
