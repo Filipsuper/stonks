@@ -3,7 +3,7 @@ import React from 'react'
 import Graph from './Graph';
 
 type Props = {
-    user: any, //Needs a type https://github.com/Filipsuper/stonks/issues/1
+    user: User,
 }
 
 export default function homeScreen( props : Props) {
