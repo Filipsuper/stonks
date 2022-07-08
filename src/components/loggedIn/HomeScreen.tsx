@@ -2,8 +2,8 @@ import { User } from 'firebase/auth'
 import React from 'react'
 import Graph from './Graph';
 
-interface Props{
-    user: any, //Vet inte riktigt varöfr jag inte kan assigna "User"
+type Props = {
+    user: any, //Needs a type https://github.com/Filipsuper/stonks/issues/1
 }
 
 export default function homeScreen( props : Props) {
@@ -11,10 +11,13 @@ export default function homeScreen( props : Props) {
     const { user } = props;
 
     return (
-        <main className='w-full h-screen grid grid-cols-3 grid-rows-2'>
+        <main className='w-full h-screen flex flex-row'>
             <Graph />
-            <div></div>
-            <div></div>
+            <div>
+                <div>d</div>
+                <div>d</div>
+            </div>
+            
         </main>
     )
 }
