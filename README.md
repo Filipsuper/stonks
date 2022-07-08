@@ -1,3 +1,3 @@
-# Stonks app to draw on graph
+# Stonks app for papertrading
 
 ## WIP brb
