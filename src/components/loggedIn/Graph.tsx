@@ -25,15 +25,36 @@ export default function Graph({}: Props) {
             this.height = this.canvas.current?.height!;
             this.width = this.canvas.current?.height!;
             // const ctx = canvas.current?.getContext("2d") as CanvasRenderingContext2D;
-            this.initGridLines();
+            this.init();
         }
-        initGridLines(){
+        init(){
             if(this.ctx == undefined) return;
 
-            this.ctx.fillStyle = "rgb(30 41 59)";
-            for (let i = 0; i < 20; i++) {
-                this.ctx.fillRect(0,i*50+20,this.width,2)
+            this.gridLines(10);
+        }
+        gridLines(lines : number){
+
+            const percentOfCanvas = (numb : number) => {
+                return this.width*(numb/100)
             }
+
+            const fontSize = percentOfCanvas(2);
+            
+            for (let i = 0; i < lines; i++) {
+                this.ctx.fillStyle = "rgb(30 41 59)";
+                this.ctx.fillRect(percentOfCanvas(5),i*(this.height/lines)+(this.height/lines),this.width-percentOfCanvas(10),2);
+                
+                
+                // this.ctx.fillRect();
+                this.ctx.fillStyle = "rgb(71 85 105)"
+                this.ctx.font = `100 ${fontSize}px Verdana`
+                this.ctx.fillText("00.00",this.width-percentOfCanvas(4),i*(this.height/lines)+(this.height/lines)+percentOfCanvas(1), percentOfCanvas(4))
+                this.ctx.fillText("00.00",0,i*(this.height/lines)+(this.height/lines)+percentOfCanvas(1), percentOfCanvas(4))
+            }
+        }
+        updateGraph(){
+            this.gridLines(10);
+
         }
     }
 
@@ -44,8 +65,8 @@ export default function Graph({}: Props) {
     },[]);
 
     return (
-        <div className='bg-slate-900 w-full h-full center rounded-xl p-4'>
-            <canvas className='w-full h-full' ref={canvas} width={1000} height={1000}></canvas>
+        <div className='bg-slate-900 w-full h-full center rounded-md p-4'>
+            <canvas className='w-full h-full' ref={canvas} width={1500} height={1500}></canvas>
         </div>
     )
 }
