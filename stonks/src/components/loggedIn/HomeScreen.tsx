@@ -15,10 +15,6 @@ export default function homeScreen( props : Props) {
             <div className='w-3/4 h-full center p-10'>
                 <Graph />
             </div>
-            <div className='w-1/4 h-full center'>
-                <div>d</div>
-                <div>d</div>
-            </div>
         </main>
     )
 }

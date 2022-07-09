@@ -2,15 +2,6 @@ import React, { RefObject, useEffect, useRef } from 'react'
 
 type Props = {}
 
-
-
-
-function draw(ctx : CanvasRenderingContext2D){
-    if(ctx == undefined) return;
-    ctx.fillStyle = "rgb(0,200,100)";
-    ctx?.fillRect(0,0,100,100);
-}
-
 export default function Graph({}: Props) {
     class Graph{
         public canvas : RefObject<HTMLCanvasElement>;
@@ -65,8 +56,8 @@ export default function Graph({}: Props) {
     },[]);
 
     return (
-        <div className='bg-slate-900 w-full h-full center rounded-md p-4'>
-            <canvas className='w-full h-full' ref={canvas} width={1500} height={1500}></canvas>
+        <div className='bg-slate-900 w-full max-h-full aspect-video center rounded-md p-4'>
+            <canvas className='w-full max-h-full h-auto' ref={canvas} width={1500} height={1500}></canvas>
         </div>
     )
 }

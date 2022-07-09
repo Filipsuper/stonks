@@ -13,7 +13,10 @@ function App() {
   return (
     <>
       <section className='flex justify-center items-center min-h-screen'>
-        {auth.currentUser ? <HomeScreen user={ user! }/> : <Auth setUser={setUser}/>} 
+        {/* {auth.currentUser ? <HomeScreen user={ user! }/> : <Auth setUser={setUser}/>}  */}
+        {/* DEV mode */}
+        <HomeScreen user={user!}/> 
+        {/* DEV mode */}
       </section>
       <footer></footer>
     </>
