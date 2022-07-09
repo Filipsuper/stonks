@@ -1,2 +1,1 @@
-Commit message info:
-https://gitmoji.dev/
+Use gitmoji on commits
