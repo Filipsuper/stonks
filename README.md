@@ -1,3 +1,3 @@
 # Stonks app for papertrading
 
-## WIP brb
+# # Made with React
