@@ -5,10 +5,15 @@
 
 *{
   @apply border-slate-900;
+  @apply box-border;
 }
+/* #root{
+  @apply h-screen
+} */
 body{
   @apply text-slate-600;
-  @apply bg-slate-800;
+  /* @apply bg-slate-950; */
+  @apply bg-gradient-to-tr from-slate-800 to-slate-950;
 }
 input{
   /* @apply border-2; */
